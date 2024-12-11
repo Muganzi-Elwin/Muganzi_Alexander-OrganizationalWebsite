@@ -9,31 +9,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Optional external CSS -->
     <style>
-        /* Hero Section for consistency */
+        /* Navbar Alignment */
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        /* Hero Section */
         .hero {
-            background-color: #f8f9fa;
-            /* Light grey background */
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
             color: #333;
-            /* Dark text for contrast */
             padding: 80px 20px;
             text-align: center;
         }
 
-        /* Adjusting font size and spacing for FAQ */
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
         .faq-title {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 40px;
-        }
-
-        .faq-question {
-            font-weight: bold;
-            color: #007bff;
-        }
-
-        .faq-answer {
-            font-size: 1.1rem;
-            margin-top: 10px;
+            text-align: center;
         }
 
         .accordion-button {
@@ -44,11 +43,46 @@
             background-color: #007bff;
             color: white;
         }
+
+        .accordion-body {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
     </style>
 </head>
 
 <body>
-    <!-- Navbar (Navigation Bar) -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Beauty Store</a>
@@ -59,19 +93,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html" target="_blank">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html" target="_blank">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html" target="_blank">Products</a>
+                        <a class="nav-link" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="faq.html" target="_blank">FAQ</a>
+                        <a class="nav-link active" href="faq.html">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html" target="_blank">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -81,16 +115,14 @@
     <!-- Hero Section -->
     <div class="hero">
         <h2>Frequently Asked Questions</h2>
-        <p>Here are some of the most common questions about our beauty products and services.</p>
+        <p>Here are answers to our customers' most common inquiries about Muron Beauty Products.</p>
     </div>
 
     <!-- FAQ Section -->
     <div class="container mt-5">
         <h3 class="faq-title">Questions & Answers</h3>
-
-        <!-- Accordion for FAQ questions -->
         <div class="accordion" id="faqAccordion">
-            <!-- Question 1 -->
+            <!-- Questions -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -98,76 +130,88 @@
                         What are the benefits of using Muron Beauty Products?
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body faq-answer">
-                        Muron Beauty Products are designed to enhance your skin's natural glow, offering hydration,
-                        protection, and anti-aging benefits using only natural ingredients.
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                    <div class="accordion-body">
+                        Muron Beauty Products enhance your skin's natural glow, offering hydration, protection, and
+                        anti-aging benefits with natural ingredients.
                     </div>
                 </div>
             </div>
 
-            <!-- Question 2 -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        How can I place an order for Muron Beauty Products?
+                        How can I place an order?
                     </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body faq-answer">
-                        You can place an order through our online store by selecting your desired products and checking
-                        out via our secure payment system.
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                    <div class="accordion-body">
+                        Orders can be placed through our website by selecting your desired products and proceeding
+                        through our secure checkout.
                     </div>
                 </div>
             </div>
 
-            <!-- Question 3 -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Are the products suitable for sensitive skin?
+                        Are Muron products suitable for sensitive skin?
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body faq-answer">
-                        Yes, Muron Beauty Products are made with natural, hypoallergenic ingredients that are gentle and
-                        suitable for all skin types, including sensitive skin.
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                    <div class="accordion-body">
+                        Yes, our products are made with hypoallergenic, natural ingredients suitable for all skin types.
                     </div>
                 </div>
             </div>
 
-            <!-- Question 4 -->
+            <!-- Additional Questions -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        How long will it take for my order to arrive?
+                        Do you offer free shipping?
                     </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body faq-answer">
-                        Orders are typically processed within 2-3 business days, and delivery times vary depending on
-                        your location. You will receive a tracking number once your order has shipped.
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                    <div class="accordion-body">
+                        Free shipping is available for orders above $50. See our shipping policy for more details.
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Beauty Store. All rights reserved.</p>
+    <footer class="footer mt-5">
+        <div>
+            <p>&copy; 2024 Beauty Store. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS (via CDN) -->
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show Back to Top Button
+        window.onscroll = function () {
+            const button = document.querySelector('.back-to-top');
+            button.style.display = window.scrollY > 300 ? 'block' : 'none';
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>

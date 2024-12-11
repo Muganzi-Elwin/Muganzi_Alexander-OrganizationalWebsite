@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us - Beauty Store</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         .hero-section {
             height: 80vh;
-            background: url('about-placeholder.jpg') no-repeat center center/cover;
+            background: url('images/about-us-bg.png') no-repeat center center/cover;
             position: relative;
         }
 
@@ -33,11 +35,40 @@
             padding: 50px 0;
         }
 
+        .about-section h2 {
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        .about-section p {
+            line-height: 1.8;
+            color: #6c757d;
+        }
+
+        .about-values {
+            margin-top: 30px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
         footer {
             background-color: #343a40;
-            /* Dark gray for contrast */
             color: #ffffff;
-            /* White text for readability */
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff6f61;
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            color: #ff6f61 !important;
         }
     </style>
 </head>
@@ -52,7 +83,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html" target="_blank">Home</a>
                     </li>
@@ -75,25 +106,39 @@
         <div class="overlay"></div>
         <div class="hero-content">
             <h1 class="display-4 fw-bold">About Beauty Store</h1>
-            <p class="lead">Our mission is to provide premium beauty products that make you feel amazing every day.</p>
+            <p class="lead">Bringing natural beauty solutions to your doorstep.</p>
         </div>
     </div>
 
     <!-- About Section -->
-    <div class="container about-section text-center">
+    <div class="container about-section">
         <h2>Our Story</h2>
-        <p>Beauty Store was founded with a simple goal: to provide high-quality, affordable beauty products to everyone.
-            We believe in the power of beauty to boost confidence, and we're committed to helping our customers find the
-            products that best suit their needs.</p>
+        <p>
+            Beauty Store was founded to tackle the growing concerns of fake and harmful beauty products in the market.
+            We envisioned a space where customers could trust the quality of products and enjoy the benefits of natural,
+            skin-safe ingredients. With the rise of skin-related issues, our mission has been clear: create and deliver
+            beauty solutions that are both effective and safe.
+        </p>
         <h3>Our Mission</h3>
-        <p>Our mission is to offer a wide range of beauty products that cater to every skin type, hair type, and beauty
-            preference. We aim to deliver top-tier quality with a focus on customer satisfaction and sustainable
-            practices.</p>
+        <p>
+            We aim to empower individuals by providing beauty products that enhance confidence and celebrate diversity.
+            By offering a wide range of natural and eco-friendly items, we promote health-conscious choices and a
+            sustainable future.
+        </p>
+        <div class="about-values">
+            <h4>Our Values</h4>
+            <ul>
+                <li>Quality Assurance: Every product is thoroughly tested to ensure safety and effectiveness.</li>
+                <li>Natural Ingredients: We prioritize nature-inspired formulations that work harmoniously with your
+                    skin.</li>
+                <li>Customer-Centric: Your satisfaction is our top priority, and we strive to exceed expectations.</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer class="text-center mt-5 py-3">
-        <p>&copy; 2024 Beauty Store. All rights reserved.</p>
+        <p>&copy; 2024 Beauty Store. All rights reserved. <a href="#top">Back to Top</a></p>
     </footer>
 
     <!-- Bootstrap JS -->
